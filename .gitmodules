@@ -1,0 +1,9 @@
+[submodule "talgat-demo-store-back"]
+	path = talgat-demo-store-back
+	url = https://github.com/talgat-alimbayev/talgat-demo-store-back.git
+[submodule "talgat-demo-store-front"]
+	path = talgat-demo-store-front
+	url = https://github.com/talgat-alimbayev/talgat-demo-store-front.git
+[submodule "talgat-demo-store-email"]
+	path = talgat-demo-store-email
+	url = https://github.com/talgat-alimbayev/talgat-demo-store-email.git
