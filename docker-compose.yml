@@ -1,0 +1,52 @@
+version: "3.9"
+services:
+  backend:
+    build: ./talgat-demo-store-back
+    container_name: back
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+      - rabbitmq
+  front:
+    build: ./talgat-demo-store-front
+    container_name: front
+    ports:
+      - 8081:8081
+    depends_on:
+      - postgres
+      - rabbitmq
+      - backend
+  email:
+    build: ./talgat-demo-store-email
+    container_name: email
+    ports:
+      - 8082:8082
+    depends_on:
+      - postgres
+      - rabbitmq
+      - backend
+  postgres:
+    image: postgres:13.8
+    container_name: postgres
+    environment:
+      POSTGRES_DB: talgat-demo-store
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: g502
+    ports:
+      - 5432:5432
+    restart: always
+  rabbitmq:
+    image: rabbitmq:3.11.4-management
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./rabbitmq/definitions.json:/etc/rabbitmq/definitions.json:ro
+      - ./rabbitmq/rabbitmq.config:/etc/rabbitmq/rabbitmq.config:ro
+    depends_on:
+      - postgres
