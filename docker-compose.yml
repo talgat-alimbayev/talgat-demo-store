@@ -35,7 +35,6 @@ services:
       POSTGRES_PASSWORD: g502
     ports:
       - 5432:5432
-    restart: always
   rabbitmq:
     image: rabbitmq:3.11.4-management
     container_name: rabbitmq
