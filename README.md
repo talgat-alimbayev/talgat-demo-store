@@ -6,9 +6,9 @@
 
 - git clone https://github.com/talgat-alimbayev/talgat-demo-store
 
-- git submodule update --init --recursive
-
 - перейти в директорию (cd talgat-demo-store)
+
+- git submodule update --init --recursive
 
 - обновить содержимое .env файла на логин и пароль высланный в личном сообщении
 
