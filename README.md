@@ -6,7 +6,7 @@
 
 - git clone https://github.com/talgat-alimbayev/talgat-demo-store
 
-- перейти в директорию
+- перейти в директорию (cd talgat-demo-store)
 
 - docker-compose up
 
