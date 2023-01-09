@@ -3,9 +3,12 @@
 Добро пожаловать в мой магазин!
 
 Магазин запускается через docker-compose.yml:
-git pull https://github.com/talgat-alimbayev/talgat-demo-store
-перейти в директорию
-docker-compose up
+
+- git clone https://github.com/talgat-alimbayev/talgat-demo-store
+
+- перейти в директорию
+
+- docker-compose up
 
 Магазин может:
 
