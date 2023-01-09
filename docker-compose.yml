@@ -3,6 +3,9 @@ services:
   backend:
     build: ./talgat-demo-store-back
     container_name: back
+    environment:
+      EMAIL: ${EMAIL}
+      PASS: ${PASS}
     ports:
       - 8080:8080
     depends_on:
