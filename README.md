@@ -6,9 +6,11 @@
 
 - git clone https://github.com/talgat-alimbayev/talgat-demo-store
 
+- перейти в директорию (cd talgat-demo-store)
+
 - git submodule update --init --recursive
 
-- перейти в директорию (cd talgat-demo-store)
+- обновить содержимое .env файла на логин и пароль высланный в личном сообщении
 
 - docker-compose up
 
